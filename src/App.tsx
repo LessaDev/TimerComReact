@@ -1,12 +1,13 @@
 import React from 'react';
+import {Form} from "./components/form/Form";
+import Lista from "./components/lista/lista";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          <h2>Primeira Experiência com React usando TypeScript</h2>
-        </p>
+         <Lista/>
+          <Form/>
       </header>
     </div>
   );
