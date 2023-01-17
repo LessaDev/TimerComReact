@@ -1,3 +1,5 @@
+import style from './ListaStyle.module.scss'
+import Item from "./item/Item";
 
 function Lista() {
     const preparos = [{
@@ -9,15 +11,12 @@ function Lista() {
     },{
         preparo: 'pudim',
         tempo: '02:00:00'
-    }]
+    },]
     return(
-        <aside>
-            |<h2>Preparos do dia</h2>
-            <ul>{preparos.map((item, index) => (
-                <li key={index}>
-                    <h3> {item.preparo} </h3>
-                    <span> {item.tempo}</span>
-                </li>
+        <aside className={style.listaTarefas}>
+            <h2>Preparos do dia</h2>
+            <ul>{preparos.map((item) => (
+            <Item{...item} />
             ))}
             </ul>
         </aside>

@@ -1,12 +1,14 @@
 import React from "react";
 import {ButtonClick} from "../button/ButtonClick";
+import style from './FormStyle.module.scss'
+
 
 export class Form extends React.Component{
     render() {
         return (
             <>
-            <form>
-                <div>
+            <form className={style.novaTarefa}>
+                <div className={style.inputContainer}>
                     <label htmlFor="tarefa">
                         Tarefa
                     </label>
@@ -17,9 +19,8 @@ export class Form extends React.Component{
                         placeholder="Qual tarefa deseja realizar?"
                         required
                     />
-                    <ButtonClick/>
                 </div>
-                <div>
+                <div className={style.inputContainer}>
                     <label htmlFor="time">
                         Tempo
                     </label>
@@ -32,8 +33,8 @@ export class Form extends React.Component{
                         max="01:30:00"
                         required
                     />
-                    <ButtonClick/>
                 </div>
+                <ButtonClick>Adcionar</ButtonClick>
             </form>
             </>
         );

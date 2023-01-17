@@ -1,10 +1,15 @@
 import React from "react";
+import style from "./ButtonClickStyle.module.scss";
 
-export class ButtonClick extends React.Component {
+export class ButtonClick extends React.Component<{
+    children?: React.ReactNode
+}>{
     render() {
         return(
             <div>
-                <button> É só um botão</button>
+                <button className={style.botao}>
+                    {this.props.children}
+                </button>
             </div>
     )
     }
